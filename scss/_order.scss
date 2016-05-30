@@ -1,0 +1,312 @@
+$blue:#1f9eff;
+$gray-border:#ebecf1;
+$gray-text:#666;
+$red:#dd2727;
+
+//高度
+$hm:45px;
+$bannerh:362px;
+
+//文字
+$fs:11px;
+
+$fs:14px;
+$fm:16px;
+$fl:20px;
+
+//颜色
+$cyellow: #ff8b00;
+$red: red;
+$bbb: #6b6b6b;
+$ddd: #d6d6d6;
+
+.fl{float: left;}
+.fr{float: right;}
+.mb60{margin-bottom: 60px;}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html,body{
+    background: #f9fafe;
+  font-family: Microsoft Yahei;
+}
+dd,p{margin: 0;}
+li{
+    list-style: none;
+}
+a,a:hover{
+    color: #333;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+.bar-nav {
+    width: 100%;
+    height: $hm;
+    color: #fff;
+    overflow: hidden;
+    background-color: $blue;
+    .title {
+        line-height: $hm;
+        width: 100%;
+        font-size: $fm;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//订单
+
+.ordertags{
+    height: $hm;
+    line-height: $hm;
+    font-size: $fm;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: #fff;
+    li{
+        width: 25%;
+        float: left;
+        text-align: center;
+        a{
+            display: block;
+        }
+        &.vis>a,&>a:active{
+            color: $cyellow;
+        }
+        &.vis{
+            margin-top: -1px;
+            border-bottom: 1px solid $cyellow;
+        }
+    }
+}
+
+.orderlist{
+    .storelist{
+        margin-bottom: 10px;
+        border-top: 1px solid #ebecf1;
+        background: #fff;
+    }
+    .store{
+        height: 40px;
+        position: relative;
+        .check{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            &.vis span{
+                background: #fff url(../img/check.png) no-repeat center center;
+                background-size: 100% 100%;
+            }
+            span{
+                width: 20px;
+                height: 20px;
+                display: block;
+                float: left;
+                margin: 11px 0 0 11px;
+                border-radius: 50%;
+                background: #fff url(../img/check_no.png) no-repeat center center;
+                background-size: 100% 100%;
+            }
+        }
+        a{
+            display: block;
+            height: 100%;
+            line-height: 22px;
+            padding: 10px 0;
+            .ico{
+                float: left;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+            }
+            span{
+                float: left;
+                margin-left: 10px;
+            }
+        }
+    }
+    .list{
+        margin: 0;
+        padding: 10px;
+        background: #f9f9f9;
+        li{
+            font-size: $fs;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .dimg{
+                width: 75px;
+                height: 75px;
+                float: left;
+            }
+            .rtxt{
+                margin-left: 85px;
+                .tit{
+                    height: 48px;
+                    line-height: 24px;
+                    overflow: hidden;
+                }
+                .m{
+                    position: absolute;
+                    left: 85px;
+                    bottom: 0;
+                    color: $bbb;
+                    .c{
+                        color: $red;
+                        font-size: $fm;
+                    }
+                }
+                .num{
+                    position: absolute;
+                    right: 10px;
+                    bottom: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .mass{
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        text-align: right;
+        padding: 0 10px;
+        border-bottom: 1px solid #ebecf1;
+    }
+}
+
+.btnwarp_gg{
+    padding: 10px;
+    text-align: right;
+    a{
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        font-size: $fs;
+        padding: 0 10px;
+        border-radius: 3px;
+        margin-left: 5px;
+        border: 1px solid $ddd;
+        &.vis{
+            color: $cyellow;
+            border-color: $cyellow;
+        }
+    }
+}
+
+.merge_pay{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #fff;
+    border-top: 1px solid #ebecf1;
+    @extend .btnwarp_gg;
+}
+
+.ord_address{
+    margin: 10px 0;
+    padding: 10px;
+    color: $bbb;
+    font-size: 14px;
+    line-height: 24px;
+    background: #fff;
+    border-top: 1px solid #ebecf1;
+    border-bottom: 1px solid #ebecf1;
+    dl{
+        overflow: hidden;
+        margin: 0;
+        padding-left: 25px;
+        dt{
+            float: left;
+            font-weight: normal;
+        }
+        dd{
+            float: right;
+        }
+    }
+    .m{
+        padding-left: 25px;
+        background: url(../img/map_ico.png) no-repeat left center;
+        background-size: 15px;
+    }
+}
+
+
+
+//customized
+.customized{
+    margin: 10px 0;
+    background: #fff;
+    .dtit{
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+    dl{        padding: 10px 0;
+        font-size: 14px;
+        margin: 0;
+        border-top: 1px solid #ddd;
+        dt{
+            float: left;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: right;
+        }
+        dd{
+            margin-left: 100px;
+            input{
+                width: 100%;
+                height: 30px;
+                color: #c1c1c1;
+                line-height: 30px;
+                border: none;
+            }
+        }
+    }
+}
+.customized_btn{
+    margin: 20px 0 50px 0;
+    a{
+        width: 80%;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background: #ff4710;
+        border-radius: 30px;
+        display: block;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0 auto;
+        color: #fff;
+        &:hover{
+            background: #e53905;
+        }
+    }
+}
+
